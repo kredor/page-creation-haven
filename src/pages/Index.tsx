@@ -8,8 +8,13 @@ const Index = () => {
       {/* Navigation */}
       <nav className="fixed w-full bg-accent/80 backdrop-blur-md z-50 py-4">
         <div className="container mx-auto px-4 flex justify-between items-center">
-          <a href="/" className="text-2xl font-display font-bold">
-            Mark och Vattenbyrån
+          <a href="/" className="flex items-center gap-2">
+            <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center">
+              <Droplet className="w-6 h-6 text-accent transform -rotate-45" />
+            </div>
+            <span className="text-2xl font-display font-bold">
+              Mark och Vattenbyrån
+            </span>
           </a>
           <div className="hidden md:flex space-x-8">
             <a href="#services" className="hover:text-secondary transition-colors">Tjänster</a>
