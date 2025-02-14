@@ -1,5 +1,5 @@
 
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Droplet, LeafyGreen, LineChart } from "lucide-react";
 
 const Index = () => {
   return (
@@ -8,11 +8,11 @@ const Index = () => {
       <nav className="fixed w-full bg-accent/80 backdrop-blur-md z-50 py-4">
         <div className="container mx-auto px-4 flex justify-between items-center">
           <a href="/" className="text-2xl font-display font-bold">
-            Företaget
+            Mark och Vattenbyrån
           </a>
           <div className="hidden md:flex space-x-8">
-            <a href="#features" className="hover:text-secondary transition-colors">Funktioner</a>
-            <a href="#about" className="hover:text-secondary transition-colors">Om oss</a>
+            <a href="#services" className="hover:text-secondary transition-colors">Tjänster</a>
+            <a href="#team" className="hover:text-secondary transition-colors">Om oss</a>
             <a href="#contact" className="hover:text-secondary transition-colors">Kontakt</a>
           </div>
         </div>
@@ -22,43 +22,49 @@ const Index = () => {
       <section className="pt-32 pb-20 px-4">
         <div className="container mx-auto text-center section-animate">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            Skapa något 
-            <span className="text-secondary"> extraordinärt</span>
+            Experter på 
+            <span className="text-secondary"> återvätning</span>
           </h1>
           <p className="text-xl md:text-2xl mb-12 max-w-2xl mx-auto">
-            Vi hjälper företag att bygga moderna och användarvänliga digitala lösningar.
+            Vi erbjuder professionell projektering och uppföljning av återvätningsprojekt med fokus på grundvatten, växthusgaser och vegetation.
           </p>
           <button className="hero-button group">
-            Kom igång
+            Kontakta oss
             <ArrowRight className="inline-block ml-2 group-hover:translate-x-1 transition-transform" />
           </button>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section id="features" className="py-20 bg-white">
+      {/* Services Section */}
+      <section id="services" className="py-20 bg-white">
         <div className="container mx-auto px-4 section-animate">
           <h2 className="section-title text-center">Våra tjänster</h2>
           <div className="grid md:grid-cols-3 gap-8 mt-12">
-            {features.map((feature, index) => (
+            {services.map((service, index) => (
               <div key={index} className="feature-card">
-                <h3 className="text-xl font-bold mb-4">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
+                <div className="flex items-center mb-4">
+                  <service.icon className="w-6 h-6 text-secondary mr-2" />
+                  <h3 className="text-xl font-bold">{service.title}</h3>
+                </div>
+                <p className="text-gray-600">{service.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="py-20">
+      {/* Team Section */}
+      <section id="team" className="py-20">
         <div className="container mx-auto px-4 section-animate">
-          <h2 className="section-title text-center">Om oss</h2>
-          <div className="max-w-3xl mx-auto text-center mt-8">
-            <p className="text-lg leading-relaxed">
-              Vi är ett passionerat team som brinner för att skapa exceptionella digitala upplevelser. 
-              Med års av erfarenhet hjälper vi företag att växa och utvecklas i den digitala världen.
-            </p>
+          <h2 className="section-title text-center">Vårt team</h2>
+          <div className="grid md:grid-cols-3 gap-8 mt-12">
+            {team.map((member, index) => (
+              <div key={index} className="text-center">
+                <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gray-200"></div>
+                <h3 className="text-xl font-bold mb-2">{member.name}</h3>
+                <p className="text-gray-600">{member.role}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -105,12 +111,11 @@ const Index = () => {
       <footer className="bg-primary text-accent py-12">
         <div className="container mx-auto px-4">
           <div className="text-center">
-            <h3 className="text-2xl font-display font-bold mb-4">Företaget</h3>
-            <p className="mb-6">Skapar morgondagens digitala lösningar</p>
+            <h3 className="text-2xl font-display font-bold mb-4">Mark och Vattenbyrån</h3>
+            <p className="mb-6">Experter på återvätning och miljöövervakning</p>
             <div className="flex justify-center space-x-6">
-              <a href="#" className="hover:text-secondary transition-colors">Twitter</a>
               <a href="#" className="hover:text-secondary transition-colors">LinkedIn</a>
-              <a href="#" className="hover:text-secondary transition-colors">Instagram</a>
+              <a href="mailto:kontakt@markovattenbyran.se" className="hover:text-secondary transition-colors">E-post</a>
             </div>
           </div>
         </div>
@@ -119,19 +124,37 @@ const Index = () => {
   );
 };
 
-const features = [
+const services = [
   {
-    title: "Webbdesign",
-    description: "Vi skapar moderna och användarvänliga webbplatser som gör intryck.",
+    title: "Återvätningsprojektering",
+    description: "Vi projekterar återvätning av utdikade marker med fokus på hållbarhet och effektivitet.",
+    icon: Droplet
   },
   {
-    title: "Utveckling",
-    description: "Skräddarsydda lösningar med fokus på prestanda och användarupplevelse.",
+    title: "Miljöövervakning",
+    description: "Uppföljning av grundvattenyta och växthusgasavgång för att säkerställa projektets framgång.",
+    icon: LineChart
   },
   {
-    title: "Strategi",
-    description: "Vi hjälper dig att utveckla en digital strategi som ger resultat.",
+    title: "Vegetationsanalys",
+    description: "Vi analyserar och följer upp hur vegetationen förändras i samband med återvätning.",
+    icon: LeafyGreen
   },
+];
+
+const team = [
+  {
+    name: "Örjan Berglund",
+    role: "Grundare & Projektledare"
+  },
+  {
+    name: "Sabine Jordan",
+    role: "Miljöspecialist"
+  },
+  {
+    name: "Daniel Iseskog",
+    role: "Teknisk Expert"
+  }
 ];
 
 export default Index;
