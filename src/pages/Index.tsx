@@ -1,5 +1,5 @@
 
-import { ArrowRight, Droplet, LeafyGreen, LineChart } from "lucide-react";
+import { ArrowRight, Droplet, LeafyGreen, LineChart, Waves } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const Index = () => {
@@ -9,8 +9,10 @@ const Index = () => {
       <nav className="fixed w-full bg-accent/80 backdrop-blur-md z-50 py-4">
         <div className="container mx-auto px-4 flex justify-between items-center">
           <a href="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center">
-              <Droplet className="w-6 h-6 text-accent transform -rotate-45" />
+            <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center relative overflow-hidden">
+              <div className="absolute bottom-0 w-full h-1/2 bg-primary/20"></div>
+              <Droplet className="w-6 h-6 text-accent transform -rotate-45 absolute top-1" />
+              <Waves className="w-6 h-6 text-accent/80 absolute bottom-1" />
             </div>
             <span className="text-2xl font-display font-bold">
               Mark och Vattenbyrån
