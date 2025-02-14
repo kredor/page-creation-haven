@@ -1,5 +1,6 @@
 
 import { ArrowRight, Droplet, LeafyGreen, LineChart } from "lucide-react";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const Index = () => {
   return (
@@ -60,7 +61,13 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8 mt-12">
             {team.map((member, index) => (
               <div key={index} className="text-center">
-                <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gray-200"></div>
+                <Avatar className="w-32 h-32 mx-auto mb-4">
+                  {member.image ? (
+                    <AvatarImage src={member.image} alt={member.name} className="object-cover" />
+                  ) : (
+                    <AvatarFallback className="bg-gray-200"></AvatarFallback>
+                  )}
+                </Avatar>
                 <h3 className="text-xl font-bold mb-2">{member.name}</h3>
                 <p className="text-gray-600">{member.role}</p>
               </div>
@@ -145,15 +152,18 @@ const services = [
 const team = [
   {
     name: "Örjan Berglund",
-    role: "Grundare & Projektledare"
+    role: "Grundare & Projektledare",
+    image: "/lovable-uploads/0a89a031-97a3-46dc-a5c0-f265939f38bc.png"
   },
   {
     name: "Sabine Jordan",
-    role: "Miljöspecialist"
+    role: "Miljöspecialist",
+    image: ""
   },
   {
     name: "Daniel Iseskog",
-    role: "Teknisk Expert"
+    role: "Teknisk Expert",
+    image: ""
   }
 ];
 
