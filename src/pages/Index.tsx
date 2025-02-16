@@ -1,4 +1,3 @@
-
 import { ArrowRight, Droplet, LeafyGreen, LineChart, Waves } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
@@ -76,7 +75,31 @@ const Index = () => {
                   )}
                 </Avatar>
                 <h3 className="text-xl font-bold mb-2">{member.name}</h3>
-                <p className="text-gray-600">{member.role}</p>
+                <p className="text-gray-600 mb-4">{member.role}</p>
+                <div className="text-left text-sm space-y-2">
+                  {member.description && (
+                    <p className="text-gray-700">{member.description}</p>
+                  )}
+                  {member.expertise && (
+                    <ul className="list-disc list-inside text-gray-600 pl-2">
+                      {member.expertise.map((item, i) => (
+                        <li key={i}>{item}</li>
+                      ))}
+                    </ul>
+                  )}
+                  {member.linkedin && (
+                    <div className="text-center mt-4">
+                      <a 
+                        href={member.linkedin} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-secondary hover:text-secondary/80 transition-colors"
+                      >
+                        LinkedIn profil
+                      </a>
+                    </div>
+                  )}
+                </div>
               </div>
             ))}
           </div>
@@ -160,7 +183,16 @@ const team = [
   {
     name: "Örjan Berglund",
     role: "Grundare & Projektledare",
-    image: "/lovable-uploads/0a89a031-97a3-46dc-a5c0-f265939f38bc.png"
+    image: "/lovable-uploads/0a89a031-97a3-46dc-a5c0-f265939f38bc.png",
+    description: "Docent i markvetenskap med över 20 års erfarenhet inom miljöövervakning och mark- och vattenfrågor.",
+    expertise: [
+      "Återvätning av organogena jordar",
+      "Växthusgasmätningar",
+      "Markfysikaliska undersökningar",
+      "Projektledning inom miljöövervakning",
+      "Dränering och vattenreglering"
+    ],
+    linkedin: "https://www.linkedin.com/in/orjanberglund/"
   },
   {
     name: "Sabine Jordan",
