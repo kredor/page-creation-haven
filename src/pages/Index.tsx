@@ -165,12 +165,12 @@ const team = [
   {
     name: "Sabine Jordan",
     role: "Miljöspecialist",
-    image: ""
+    image: "/lovable-uploads/d1b76eb2-cd5b-4ac6-8fde-9ee02a65d5c7.png"
   },
   {
     name: "Daniel Iseskog",
     role: "Teknisk Expert",
-    image: ""
+    image: "/lovable-uploads/94356559-202d-45dc-8ac4-68ea422adf04.png"
   }
 ];
 
