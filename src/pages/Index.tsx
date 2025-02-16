@@ -185,7 +185,7 @@ const team = [
     name: "Örjan Berglund",
     role: "Grundare & Projektledare",
     image: "/lovable-uploads/0a89a031-97a3-46dc-a5c0-f265939f38bc.png",
-    description: "Docent i markvetenskap med över 20 års erfarenhet inom miljöövervakning och mark- och vattenfrågor.",
+    description: "Forskare i markvetenskap med över 20 års erfarenhet inom miljöövervakning och mark- och vattenfrågor.",
     expertise: [
       "Återvätning av organogena jordar",
       "Växthusgasmätningar",
@@ -199,7 +199,7 @@ const team = [
     name: "Sabine Jordan",
     role: "Miljöspecialist",
     image: "/lovable-uploads/d1b76eb2-cd5b-4ac6-8fde-9ee02a65d5c7.png",
-    description: "Docent i markvetenskap vid SLU med expertis inom växthusgasmätningar och torvmarker.",
+    description: "Forskare i markvetenskap vid SLU med expertis inom växthusgasmätningar och torvmarker.",
     expertise: [
       "Växthusgasmätningar från torvmarker",
       "Markfysikaliska och markkemiska analyser",
