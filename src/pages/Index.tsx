@@ -10,7 +10,7 @@ const Index = () => {
         <div className="container mx-auto px-4 flex justify-between items-center">
           <a href="/" className="flex items-center gap-2">
             <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center relative overflow-hidden">
-              <div className="absolute bottom-0 w-full h-1/2 bg-primary/20"></div>
+              <div className="absolute bottom-0 w-full h-1/2 bg-[#333333]"></div>
               <Droplet className="w-6 h-6 text-accent transform -rotate-45 absolute top-1" />
               <Waves className="w-6 h-6 text-accent/80 absolute bottom-1" />
             </div>
