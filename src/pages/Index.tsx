@@ -1,3 +1,4 @@
+
 import { ArrowRight, Droplet, LeafyGreen, LineChart, Waves } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
@@ -197,7 +198,16 @@ const team = [
   {
     name: "Sabine Jordan",
     role: "Miljöspecialist",
-    image: "/lovable-uploads/d1b76eb2-cd5b-4ac6-8fde-9ee02a65d5c7.png"
+    image: "/lovable-uploads/d1b76eb2-cd5b-4ac6-8fde-9ee02a65d5c7.png",
+    description: "Docent i markvetenskap vid SLU med expertis inom växthusgasmätningar och torvmarker.",
+    expertise: [
+      "Växthusgasmätningar från torvmarker",
+      "Markfysikaliska och markkemiska analyser",
+      "Återvätning av organogena jordar",
+      "Naturbaserade klimatlösningar",
+      "Torv och torvmarker"
+    ],
+    linkedin: "https://www.linkedin.com/in/sabine-jordan-24289316/"
   },
   {
     name: "Daniel Iseskog",
