@@ -41,7 +41,8 @@ const TeamSection = () => {
         "GIS och kartläggning av torvmarker",
         "Praktisk implementering av återvätning",
         "Tekniska lösningar för vattenreglering"
-      ]
+      ],
+      linkedin: "https://www.linkedin.com/in/daniel-iseskog/"
     }
   ];
 
