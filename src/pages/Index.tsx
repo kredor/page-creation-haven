@@ -1,5 +1,5 @@
 
-import { ArrowRight, Droplet, LeafyGreen, LineChart, Waves } from "lucide-react";
+import { ArrowRight, Droplet, LeafyGreen, LineChart, Waves, Globe } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const Index = () => {
@@ -33,8 +33,11 @@ const Index = () => {
             Experter på 
             <span className="text-secondary"> återvätning</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-12 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
             Vi erbjuder professionell projektering och uppföljning av återvätningsprojekt med fokus på grundvatten, växthusgaser och vegetation.
+          </p>
+          <p className="text-lg mb-12 max-w-3xl mx-auto">
+            Specialister inom naturrestaureringslagen (NRL), rewetting och Nature Restoration Law för restaurering av torvmarker och våtmarker.
           </p>
           <button className="hero-button group">
             Kontakta oss
@@ -57,6 +60,33 @@ const Index = () => {
                 <p className="text-gray-600">{service.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Policy Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4 section-animate">
+          <h2 className="section-title text-center mb-10">Expertområden</h2>
+          <div className="grid md:grid-cols-2 gap-10">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-bold mb-4 text-secondary">Naturrestaureringslagen (NRL)</h3>
+              <p className="text-gray-700 mb-4">
+                Vi hjälper markägare att navigera genom kraven i naturrestaureringslagen, med fokus på kostnadseffektiva och miljömässigt optimala lösningar för återvätning och restaurering av torvmark.
+              </p>
+              <p className="text-gray-700">
+                Våra experter har djup kunskap inom policy och implementering av EU:s Nature Restoration Law på nationell nivå.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-bold mb-4 text-secondary">Klimatpåverkan och biodiversitet</h3>
+              <p className="text-gray-700 mb-4">
+                Vi utför noggranna mätningar av växthusgasutsläpp från utdikade och återvätta torvmarker, samt följer upp biodiversitetseffekter enligt vetenskapliga standarder.
+              </p>
+              <p className="text-gray-700">
+                Våra data och analyser hjälper till att dokumentera klimatnytta och övriga ekosystemtjänster från peatland restoration och wetland restoration-projekt.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -151,6 +181,15 @@ const Index = () => {
           <div className="text-center">
             <h3 className="text-2xl font-display font-bold mb-4">Mark och Vattenbyrån</h3>
             <p className="mb-6">Experter på återvätning och miljöövervakning</p>
+            <div className="flex flex-wrap justify-center space-x-6 mb-8">
+              <span className="text-sm opacity-80 my-1">återvätning</span>
+              <span className="text-sm opacity-80 my-1">rewetting</span>
+              <span className="text-sm opacity-80 my-1">naturrestaureringslagen</span>
+              <span className="text-sm opacity-80 my-1">NRL</span>
+              <span className="text-sm opacity-80 my-1">Nature Restoration Law</span>
+              <span className="text-sm opacity-80 my-1">torvmarker</span>
+              <span className="text-sm opacity-80 my-1">våtmarker</span>
+            </div>
             <div className="flex justify-center space-x-6">
               <a href="#" className="hover:text-secondary transition-colors">LinkedIn</a>
               <a href="mailto:kontakt@markovattenbyran.se" className="hover:text-secondary transition-colors">E-post</a>
@@ -165,19 +204,24 @@ const Index = () => {
 const services = [
   {
     title: "Återvätningsprojektering",
-    description: "Vi projekterar återvätning av utdikade marker med fokus på hållbarhet och effektivitet.",
+    description: "Vi projekterar återvätning av utdikade marker (rewetting) med fokus på hållbarhet, vattennivåer och kostnadseffektivitet.",
     icon: Droplet
   },
   {
     title: "Miljöövervakning",
-    description: "Uppföljning av grundvattenyta och växthusgasavgång för att säkerställa projektets framgång.",
+    description: "Uppföljning av grundvattenyta och växthusgasavgång för att säkerställa projektets framgång och dokumentera klimatnytta.",
     icon: LineChart
   },
   {
     title: "Vegetationsanalys",
-    description: "Vi analyserar och följer upp hur vegetationen förändras i samband med återvätning.",
+    description: "Vi analyserar och följer upp hur vegetationen förändras i samband med återvätning och restaurering av våtmarker.",
     icon: LeafyGreen
   },
+  {
+    title: "EU-policy och naturrestaurering",
+    description: "Rådgivning om naturrestaureringslagen (NRL), EU:s Nature Restoration Law och praktisk implementering i Sverige.",
+    icon: Globe
+  }
 ];
 
 const team = [
@@ -212,7 +256,14 @@ const team = [
   {
     name: "Daniel Iseskog",
     role: "Teknisk Expert",
-    image: "/lovable-uploads/94356559-202d-45dc-8ac4-68ea422adf04.png"
+    image: "/lovable-uploads/94356559-202d-45dc-8ac4-68ea422adf04.png",
+    expertise: [
+      "Hydrologisk modellering",
+      "Övervakning av grundvattennivåer",
+      "GIS och kartläggning av torvmarker",
+      "Praktisk implementering av återvätning",
+      "Tekniska lösningar för vattenreglering"
+    ]
   }
 ];
 
