@@ -1,6 +1,8 @@
 
-import { ArrowRight, Droplet, LeafyGreen, LineChart, Waves, Globe } from "lucide-react";
+import { ArrowRight, Droplet, LeafyGreen, LineChart, Waves, Globe, FileText, Award, MapPin } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const Index = () => {
   return (
@@ -19,9 +21,11 @@ const Index = () => {
             </span>
           </a>
           <div className="hidden md:flex space-x-8">
+            <a href="#about" className="hover:text-secondary transition-colors">Om återvätning</a>
             <a href="#services" className="hover:text-secondary transition-colors">Tjänster</a>
             <a href="#team" className="hover:text-secondary transition-colors">Om oss</a>
             <a href="#contact" className="hover:text-secondary transition-colors">Kontakt</a>
+            <Link to="/services" className="hover:text-secondary transition-colors">Mer om våra tjänster</Link>
           </div>
         </div>
       </nav>
@@ -32,17 +36,57 @@ const Index = () => {
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             Experter på 
             <span className="text-secondary"> återvätning</span>
+            <br />
+            <span className="text-3xl md:text-4xl mt-2 block">i Mellansverige</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
-            Vi erbjuder professionell projektering och uppföljning av återvätningsprojekt med fokus på grundvatten, växthusgaser och vegetation.
+            Din partner för professionell projektering och uppföljning av återvätningsprojekt med fokus på grundvatten, växthusgaser och vegetation.
           </p>
           <p className="text-lg mb-12 max-w-3xl mx-auto">
-            Specialister inom naturrestaureringslagen (NRL), rewetting och Nature Restoration Law för restaurering av torvmarker och våtmarker.
+            Vi är specialister inom naturrestaureringslagen (NRL), rewetting och Nature Restoration Law för restaurering av torvmarker och våtmarker i Mellansverige.
           </p>
-          <button className="hero-button group">
-            Kontakta oss
-            <ArrowRight className="inline-block ml-2 group-hover:translate-x-1 transition-transform" />
-          </button>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="#contact" className="hero-button group">
+              Kontakta oss
+              <ArrowRight className="inline-block ml-2 group-hover:translate-x-1 transition-transform" />
+            </a>
+            <a href="#about" className="bg-white text-primary px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
+              Läs mer om återvätning
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* About Rewetting Section */}
+      <section id="about" className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4 section-animate">
+          <h2 className="section-title text-center mb-12">Återvätning av torvmarker – för klimatet och naturen</h2>
+          
+          <div className="bg-white p-8 rounded-lg shadow-sm max-w-4xl mx-auto mb-12">
+            <p className="text-lg mb-6">
+              Återvätning av torvmarker innebär att höja vattennivån i utdikade våtmarker. Det är en av de mest effektiva åtgärderna för att minska växthusgasutsläpp, återställa biologisk mångfald och förbättra vattenkvalitet.
+            </p>
+            <p className="text-lg mb-6">
+              Genom att återväta dikad torvjord stoppar man torvens nedbrytning som frigör koldioxid, och man skapar samtidigt nya livsmiljöer för växter och djur. För markägare, myndigheter och även stora markägare som kyrkan betyder detta att man kan bidra till klimatmålen samtidigt som man får en rikare natur på sin mark.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold mb-6 text-center text-secondary">Din partner för återvätning i Mellansverige</h3>
+            <p className="text-lg mb-6">
+              Vi är specialister på återvätning av torvmarker i Mellansverige. Med gedigen erfarenhet och djup kompetens inom agronomi och torvmarksekologi hjälper vi markägare, kommuner, myndigheter och kyrkan att planera och genomföra framgångsrika återvätningprojekt.
+            </p>
+            <p className="text-lg mb-6">
+              Vårt företag erbjuder en komplett tjänst från idé till uppföljning – allt för att ni som kund ska känna er trygga genom hela processen. Vi anpassar språket och processen efter er kunskapsnivå, så att även ni som inte är experter lätt förstår nyttan och stegen i projektet.
+            </p>
+          </div>
+
+          <div className="flex justify-center mt-8">
+            <Link to="/services" className="hero-button group">
+              Utforska våra tjänster
+              <ArrowRight className="inline-block ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -50,6 +94,9 @@ const Index = () => {
       <section id="services" className="py-20 bg-white">
         <div className="container mx-auto px-4 section-animate">
           <h2 className="section-title text-center">Våra tjänster</h2>
+          <p className="text-xl text-center max-w-3xl mx-auto mb-12">
+            Vi erbjuder ett helhetsgrepp på återvätning av torvmark och tar hand om varje steg i projektet
+          </p>
           <div className="grid md:grid-cols-3 gap-8 mt-12">
             {services.map((service, index) => (
               <div key={index} className="feature-card">
@@ -61,31 +108,45 @@ const Index = () => {
               </div>
             ))}
           </div>
+          <div className="mt-12 text-center">
+            <Link to="/services" className="inline-flex items-center text-secondary hover:underline">
+              Läs mer om våra tjänster
+              <ArrowRight className="ml-1 w-4 h-4" />
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Policy Section */}
+      {/* EU Policy Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 section-animate">
-          <h2 className="section-title text-center mb-10">Expertområden</h2>
-          <div className="grid md:grid-cols-2 gap-10">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-bold mb-4 text-secondary">Naturrestaureringslagen (NRL)</h3>
-              <p className="text-gray-700 mb-4">
-                Vi hjälper markägare att navigera genom kraven i naturrestaureringslagen, med fokus på kostnadseffektiva och miljömässigt optimala lösningar för återvätning och restaurering av torvmark.
-              </p>
-              <p className="text-gray-700">
-                Våra experter har djup kunskap inom policy och implementering av EU:s Nature Restoration Law på nationell nivå.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-bold mb-4 text-secondary">Klimatpåverkan och biodiversitet</h3>
-              <p className="text-gray-700 mb-4">
-                Vi utför noggranna mätningar av växthusgasutsläpp från utdikade och återvätta torvmarker, samt följer upp biodiversitetseffekter enligt vetenskapliga standarder.
-              </p>
-              <p className="text-gray-700">
-                Våra data och analyser hjälper till att dokumentera klimatnytta och övriga ekosystemtjänster från peatland restoration och wetland restoration-projekt.
-              </p>
+          <h2 className="section-title text-center mb-10">Naturrestaureringsförordningen</h2>
+          <div className="bg-white p-8 rounded-lg shadow-sm max-w-4xl mx-auto">
+            <p className="text-lg mb-6">
+              EU:s nya Naturrestaureringsförordning (antagen 2024) ställer bindande krav på att medlemsländerna återställer utdikade torvmarker, särskilt på jordbruksmark. Till exempel ska en stor andel av dikad torvjord i produktion återställas redan till 2030, med stegvis ökade mål mot 2050.
+            </p>
+            <p className="text-lg mb-6">
+              Detta kan låta som en utmaning, men det innebär också stora möjligheter för markägare och lokala aktörer. För att nå EU-målen har både svenska staten och EU utlyst medel för naturrestaurering.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6 mt-8">
+              <div className="p-4 border border-gray-100 rounded-lg">
+                <div className="flex items-center mb-3">
+                  <FileText className="w-5 h-5 text-secondary mr-2" />
+                  <h3 className="text-lg font-semibold">Konkreta projekt</h3>
+                </div>
+                <p className="text-gray-700">
+                  Den nya förordningen gör att återvätning av torvjordar prioriteras på allvar. Vi hjälper er identifiera vilka av era marker som är lämpliga att återväta.
+                </p>
+              </div>
+              <div className="p-4 border border-gray-100 rounded-lg">
+                <div className="flex items-center mb-3">
+                  <Award className="w-5 h-5 text-secondary mr-2" />
+                  <h3 className="text-lg font-semibold">Stöd och finansiering</h3>
+                </div>
+                <p className="text-gray-700">
+                  Vi guidar er genom möjligheterna till ekonomiskt stöd och hjälper till med ansökningar och ser till att projektet uppfyller kraven för finansiering.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -95,6 +156,9 @@ const Index = () => {
       <section id="team" className="py-20">
         <div className="container mx-auto px-4 section-animate">
           <h2 className="section-title text-center">Vårt team</h2>
+          <p className="text-xl text-center max-w-3xl mx-auto mb-12">
+            Vårt team består av agronomer, ekologer och ingenjörer med specialkunskap om våtmarker och torvjordar
+          </p>
           <div className="grid md:grid-cols-3 gap-8 mt-12">
             {team.map((member, index) => (
               <div key={index} className="text-center">
@@ -134,6 +198,31 @@ const Index = () => {
               </div>
             ))}
           </div>
+          <div className="mt-12 max-w-3xl mx-auto p-6 bg-gray-50 rounded-lg">
+            <h3 className="text-xl font-bold mb-4 text-center">Ledande expertis och teknik</h3>
+            <p className="text-gray-700 mb-4">
+              Torvmarksekologi är komplext, men vi behärskar allt från hydrologi till artkunskap. Dessutom har vi spetskompetens inom avancerad mätteknik – vi använder drönare för flygfotografering och 3D-modellering av terrängen, 3D-skrivare för att ta fram specialanpassade mätinstrument, samt digitala sensorer och mätsystem för att kontinuerligt övervaka vatten och gasflöden.
+            </p>
+            <p className="text-gray-700">
+              Denna kombination av kunskap och teknik gör att vi kan optimera återvätningen: vi säkerställer rätt vattennivåer för maximal klimatnytta och minimerad risk. Resultatet för er som kund blir en trygg och vetenskapsbaserad insats som ger bestående positiva effekter.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Mellansverige Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4 section-animate">
+          <div className="flex items-center justify-center mb-6">
+            <MapPin className="w-8 h-8 text-secondary mr-2" />
+            <h2 className="text-3xl font-bold">Fokus på Mellansverige</h2>
+          </div>
+          <p className="text-xl text-center max-w-3xl mx-auto mb-6">
+            Vi fokuserar på Mellansverige och känner väl till regionens unika förutsättningar – från myrarna i norr till jordbruksmarkerna i söder.
+          </p>
+          <p className="text-lg text-center max-w-3xl mx-auto">
+            Vår kundnära approach innebär att vi lyssnar på era mål, förklarar tydligt varje steg och anpassar lösningar efter just era behov.
+          </p>
         </div>
       </section>
 
@@ -141,6 +230,9 @@ const Index = () => {
       <section id="contact" className="py-20 bg-white">
         <div className="container mx-auto px-4 section-animate">
           <h2 className="section-title text-center">Kontakta oss</h2>
+          <p className="text-xl text-center max-w-3xl mx-auto mb-8">
+            Är ni redo att återställa värdefulla våtmarker och ta del av de möjligheter som ges? Tveka inte att kontakta oss.
+          </p>
           <div className="max-w-md mx-auto mt-12">
             <form className="space-y-6">
               <div>
@@ -180,7 +272,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center">
             <h3 className="text-2xl font-display font-bold mb-4">Mark och Vattenbyrån</h3>
-            <p className="mb-6">Experter på återvätning och miljöövervakning</p>
+            <p className="mb-6">Experter på återvätning och miljöövervakning i Mellansverige</p>
             <div className="flex flex-wrap justify-center space-x-6 mb-8">
               <span className="text-sm opacity-80 my-1">återvätning</span>
               <span className="text-sm opacity-80 my-1">rewetting</span>
@@ -189,6 +281,10 @@ const Index = () => {
               <span className="text-sm opacity-80 my-1">Nature Restoration Law</span>
               <span className="text-sm opacity-80 my-1">torvmarker</span>
               <span className="text-sm opacity-80 my-1">våtmarker</span>
+              <span className="text-sm opacity-80 my-1">torvjord</span>
+              <span className="text-sm opacity-80 my-1">peatland restoration</span>
+              <span className="text-sm opacity-80 my-1">wetland restoration</span>
+              <span className="text-sm opacity-80 my-1">Mellansverige</span>
             </div>
             <div className="flex justify-center space-x-6">
               <a href="#" className="hover:text-secondary transition-colors">LinkedIn</a>
@@ -203,13 +299,18 @@ const Index = () => {
 
 const services = [
   {
-    title: "Återvätningsprojektering",
-    description: "Vi projekterar återvätning av utdikade marker (rewetting) med fokus på hållbarhet, vattennivåer och kostnadseffektivitet.",
+    title: "Rådgivning & planering",
+    description: "Vi utreder era marker och förutsättningar, ger rådgivning om var återvätningen gör störst nytta och sköter myndighetskontakter och tillstånd.",
+    icon: FileText
+  },
+  {
+    title: "Projektering & genomförande",
+    description: "Våra experter projekterar tekniska lösningar med drönare och avancerad mätteknik. Genomförandet sker sedan av erfarna fältteam.",
     icon: Droplet
   },
   {
-    title: "Miljöövervakning",
-    description: "Uppföljning av grundvattenyta och växthusgasavgång för att säkerställa projektets framgång och dokumentera klimatnytta.",
+    title: "Långsiktig uppföljning",
+    description: "Vi fortsätter stödja er med monitorering, mäter grundvattennivåer, följer upp växthusgasavgång och dokumenterar effekten på biologisk mångfald.",
     icon: LineChart
   },
   {
