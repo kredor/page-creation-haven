@@ -1,5 +1,5 @@
 
-import { ArrowRight, Droplet, LeafyGreen, LineChart, Globe, FileText } from "lucide-react";
+import { ArrowRight, Droplet, LeafyGreen, LineChart, Globe, FileText, Award } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const ServicesSection = () => {
@@ -25,6 +25,12 @@ const ServicesSection = () => {
       icon: LeafyGreen
     },
     {
+      title: "Certifierad återvätning",
+      description: "Vi erbjuder certifierad återvätning enligt EU:s kommande CRCF-certifieringsmetodologi för utsläppsminskningar och kolinlagring.",
+      icon: Award,
+      link: "/methodology"
+    },
+    {
       title: "EU-policy och naturrestaurering",
       description: "Rådgivning om naturrestaureringslagen (NRL), EU:s Nature Restoration Law och praktisk implementering i Sverige.",
       icon: Globe
@@ -46,6 +52,14 @@ const ServicesSection = () => {
                 <h3 className="text-xl font-bold">{service.title}</h3>
               </div>
               <p className="text-gray-600">{service.description}</p>
+              {service.link && (
+                <div className="mt-4">
+                  <Link to={service.link} className="text-secondary hover:underline inline-flex items-center">
+                    Läs mer
+                    <ArrowRight className="ml-1 w-4 h-4" />
+                  </Link>
+                </div>
+              )}
             </div>
           ))}
         </div>

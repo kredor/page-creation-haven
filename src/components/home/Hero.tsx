@@ -1,5 +1,6 @@
 
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -20,9 +21,9 @@ const Hero = () => {
             Kontakta oss
             <ArrowRight className="inline-block ml-2 group-hover:translate-x-1 transition-transform" />
           </a>
-          <a href="#about" className="bg-white text-primary px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
-            Läs mer om återvätning
-          </a>
+          <Link to="/methodology" className="bg-white text-primary px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
+            Vår certifierade metod
+          </Link>
         </div>
       </div>
     </section>
