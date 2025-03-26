@@ -35,7 +35,7 @@ const TeamSection = () => {
       name: "Daniel Iseskog",
       role: "Teknisk Expert",
       image: "/lovable-uploads/94356559-202d-45dc-8ac4-68ea422adf04.png",
-      description: "Specialist på hydrologi och tekniska lösningar för vattenreglering i torvmarker.",
+      description: "Konstruktör och drönarpilot",
       expertise: [
         "Hydrologisk modellering",
         "Övervakning av grundvattennivåer",
