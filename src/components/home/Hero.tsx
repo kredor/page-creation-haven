@@ -8,8 +8,6 @@ const Hero = () => {
         <h1 className="text-5xl md:text-7xl font-bold mb-6">
           Experter på 
           <span className="text-secondary"> återvätning</span>
-          <br />
-          <span className="text-3xl md:text-4xl mt-2 block">i Mellansverige</span>
         </h1>
         <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
           Din partner för professionell projektering och uppföljning av återvätningsprojekt med fokus på grundvatten, växthusgaser och vegetation.
