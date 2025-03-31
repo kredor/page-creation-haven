@@ -1,8 +1,25 @@
 
-import { Droplet, Waves } from "lucide-react";
+import { Droplet, Waves, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { useState } from "react";
 
 const Navigation = () => {
+  const isMobile = useIsMobile();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const navLinks = [
+    { href: "#about", label: "Om återvätning" },
+    { href: "#services", label: "Tjänster" },
+    { href: "#team", label: "Om oss" },
+    { href: "#contact", label: "Kontakt" },
+    { to: "/services", label: "Mer om våra tjänster" },
+  ];
+
   return (
     <nav className="fixed w-full bg-accent/80 backdrop-blur-md z-50 py-4">
       <div className="container mx-auto px-4 flex justify-between items-center">
@@ -16,13 +33,62 @@ const Navigation = () => {
             Mark och Vattenbyrån
           </span>
         </a>
-        <div className="hidden md:flex space-x-8">
-          <a href="#about" className="hover:text-secondary transition-colors">Om återvätning</a>
-          <a href="#services" className="hover:text-secondary transition-colors">Tjänster</a>
-          <a href="#team" className="hover:text-secondary transition-colors">Om oss</a>
-          <a href="#contact" className="hover:text-secondary transition-colors">Kontakt</a>
-          <Link to="/services" className="hover:text-secondary transition-colors">Mer om våra tjänster</Link>
-        </div>
+        
+        {isMobile ? (
+          <div className="relative">
+            <button 
+              onClick={toggleMenu} 
+              className="p-2 text-primary hover:text-secondary transition-colors"
+              aria-label={isMenuOpen ? "Stäng meny" : "Öppna meny"}
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+            
+            {isMenuOpen && (
+              <div className="absolute right-0 top-full mt-2 w-60 bg-accent rounded-md shadow-lg border border-gray-200 overflow-hidden">
+                <div className="py-2">
+                  {navLinks.map((link, index) => (
+                    <div key={index} className="block">
+                      {link.to ? (
+                        <Link 
+                          to={link.to} 
+                          className="block px-4 py-3 hover:bg-gray-100 text-primary"
+                          onClick={toggleMenu}
+                        >
+                          {link.label}
+                        </Link>
+                      ) : (
+                        <a 
+                          href={link.href} 
+                          className="block px-4 py-3 hover:bg-gray-100 text-primary"
+                          onClick={toggleMenu}
+                        >
+                          {link.label}
+                        </a>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        ) : (
+          <div className="hidden md:flex space-x-8">
+            {navLinks.map((link, index) => (
+              <div key={index}>
+                {link.to ? (
+                  <Link to={link.to} className="hover:text-secondary transition-colors">
+                    {link.label}
+                  </Link>
+                ) : (
+                  <a href={link.href} className="hover:text-secondary transition-colors">
+                    {link.label}
+                  </a>
+                )}
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </nav>
   );
