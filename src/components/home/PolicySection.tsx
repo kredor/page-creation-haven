@@ -5,10 +5,10 @@ const PolicySection = () => {
   return (
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4 section-animate">
-        <h2 className="section-title text-center mb-10">Naturrestaureringsförordningen</h2>
+        <h2 className="section-title text-center mb-10">Naturrestaureringsfördordningen (NRF)</h2>
         <div className="bg-white p-8 rounded-lg shadow-sm max-w-4xl mx-auto">
           <p className="text-lg mb-6">
-            EU:s nya Naturrestaureringsförordning (antagen 2024) ställer bindande krav på att medlemsländerna återställer utdikade torvmarker, särskilt på jordbruksmark. Till exempel ska en stor andel av dikad torvjord i produktion återställas redan till 2030, med stegvis ökade mål mot 2050.
+            EU:s nya Naturrestaureringsfördordning (NRF) (antagen 2024) ställer bindande krav på att medlemsländerna återställer utdikade torvmarker, särskilt på jordbruksmark. Till exempel ska en stor andel av dikad torvjord i produktion återställas redan till 2030, med stegvis ökade mål mot 2050.
           </p>
           <p className="text-lg mb-6">
             Detta kan låta som en utmaning, men det innebär också stora möjligheter för markägare och lokala aktörer. För att nå EU-målen har både svenska staten och EU utlyst medel för naturrestaurering.

@@ -46,9 +46,9 @@ const Services = () => {
         </div>
 
         <div className="max-w-4xl mx-auto bg-gray-50 p-8 rounded-lg mb-16">
-          <h2 className="text-2xl font-bold mb-6 text-center">Naturrestaureringsförordningen – nya möjligheter för er</h2>
+          <h2 className="text-2xl font-bold mb-6 text-center">Naturrestaureringsfördordningen (NRF) – nya möjligheter för er</h2>
           <p className="text-lg mb-6">
-            EU:s nya Naturrestaureringsförordning (antagen 2024) ställer bindande krav på att medlemsländerna återställer utdikade torvmarker, särskilt på jordbruksmark. Detta innebär stora möjligheter för markägare och lokala aktörer.
+            EU:s nya Naturrestaureringsfördordning (NRF) (antagen 2024) ställer bindande krav på att medlemsländerna återställer utdikade torvmarker, särskilt på jordbruksmark. Detta innebär stora möjligheter för markägare och lokala aktörer.
           </p>
           
           <div className="grid md:grid-cols-3 gap-8 mt-10">
@@ -108,8 +108,8 @@ const Services = () => {
             <div className="flex flex-wrap justify-center space-x-6 mb-8">
               <span className="text-sm opacity-80 my-1">återvätning</span>
               <span className="text-sm opacity-80 my-1">rewetting</span>
-              <span className="text-sm opacity-80 my-1">naturrestaureringslagen</span>
-              <span className="text-sm opacity-80 my-1">NRL</span>
+              <span className="text-sm opacity-80 my-1">naturrestaureringsfördordningen</span>
+              <span className="text-sm opacity-80 my-1">NRF</span>
               <span className="text-sm opacity-80 my-1">torvmarker</span>
               <span className="text-sm opacity-80 my-1">våtmarker</span>
               <span className="text-sm opacity-80 my-1">Mellansverige</span>
