@@ -9,8 +9,8 @@ const Footer = () => {
           <div className="flex flex-wrap justify-center space-x-6 mb-8">
             <span className="text-sm opacity-80 my-1">återvätning</span>
             <span className="text-sm opacity-80 my-1">rewetting</span>
-            <span className="text-sm opacity-80 my-1">naturrestaureringslagen</span>
-            <span className="text-sm opacity-80 my-1">NRL</span>
+            <span className="text-sm opacity-80 my-1">naturrestaureringsfördordningen</span>
+            <span className="text-sm opacity-80 my-1">NRF</span>
             <span className="text-sm opacity-80 my-1">Nature Restoration Law</span>
             <span className="text-sm opacity-80 my-1">torvmarker</span>
             <span className="text-sm opacity-80 my-1">våtmarker</span>
