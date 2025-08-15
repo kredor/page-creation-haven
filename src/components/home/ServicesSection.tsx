@@ -1,5 +1,5 @@
 
-import { ArrowRight, Droplet, LeafyGreen, LineChart, Globe, FileText, Award } from "lucide-react";
+import { ArrowRight, Droplet, LeafyGreen, LineChart, Globe, FileText, Award, Euro, MapPin, Briefcase, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const ServicesSection = () => {
@@ -31,8 +31,43 @@ const ServicesSection = () => {
       link: "/methodology"
     },
     {
-      title: "EU-policy och naturrestaurering",
-      description: "Rådgivning om naturrestaureringslagen (NRL), EU:s Nature Restoration Law och praktisk implementering i Sverige.",
+      title: "CAP Strategic Plans-rådgivning",
+      description: "Hjälper markägare navigera EU:s nya jordbrukspolitik (CAP 2023-2027) och optimera bidragssystem för torvmarker.",
+      icon: Euro
+    },
+    {
+      title: "GAEC2 Compliance",
+      description: "Stöd för att uppfylla EU:s nya minimikrav för torvmarksskydd enligt Good Agricultural and Ecological Condition 2.",
+      icon: Award
+    },
+    {
+      title: "Paludiculture-utveckling",
+      description: "Konsultation kring våtodling som alternativ till traditionellt jordbruk - odling på våta torvmarker med bibehållen kolinlagring.",
+      icon: LeafyGreen
+    },
+    {
+      title: "Eco-schemes design",
+      description: "Utveckling av miljöåtgärder som kvalificerar för EU:s bonusbetalningar (upp till 25% av direktbetalningarna).",
+      icon: Globe
+    },
+    {
+      title: "AECM-projektledning",
+      description: "Agri-Environmental Climate Measures med betydande EU-finansiering (100-4600 EUR/ha/år) för torvmarksprojekt.",
+      icon: Briefcase
+    },
+    {
+      title: "Kartläggning och GIS",
+      description: "Professionell kartläggning av torvmarker för att kvalificera för EU-stöd och uppfylla myndighetskrav.",
+      icon: MapPin
+    },
+    {
+      title: "Finansierings- och bidragsrådgivning",
+      description: "Navigation genom komplexa EU-bidragssystem och hjälp med ansökningar för maximalt ekonomiskt stöd.",
+      icon: Euro
+    },
+    {
+      title: "Naturrestaureringsfördordningen (NRF)",
+      description: "Rådgivning om EU:s Naturrestaureringsfördordningen, praktisk implementering och compliance-stöd.",
       icon: Globe
     }
   ];
