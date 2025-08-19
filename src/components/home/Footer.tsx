@@ -20,7 +20,7 @@ const Footer = () => {
             <span className="text-sm opacity-80 my-1">Mellansverige</span>
           </div>
           <div className="flex justify-center space-x-6">
-            <a href="#" className="hover:text-secondary transition-colors">LinkedIn</a>
+            <a href="https://www.linkedin.com/company/mark-och-vattenbyr%C3%A5n/" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">LinkedIn</a>
             <a href="mailto:kontakt@markovattenbyran.se" className="hover:text-secondary transition-colors">E-post</a>
           </div>
         </div>
