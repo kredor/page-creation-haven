@@ -1,0 +1,17 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+  <!-- Circular background -->
+  <circle cx="24" cy="24" r="24" fill="hsl(var(--secondary))"/>
+  
+  <!-- Bottom half darker section representing soil/peat -->
+  <path d="M 0 24 A 24 24 0 0 0 48 24 Z" fill="#333333"/>
+  
+  <!-- Water drop icon (rotated -45 degrees) -->
+  <g transform="translate(24,12) rotate(-45)">
+    <path d="M 0 0 C -4 -8 -8 -12 0 -12 C 8 -12 4 -8 0 0 C 0 2 -2 4 -4 2 C -2 0 0 0 0 0 Z" fill="hsl(var(--accent))"/>
+  </g>
+  
+  <!-- Wave icon at bottom -->
+  <g transform="translate(24,36)">
+    <path d="M -12 0 C -8 -4 -4 4 0 0 C 4 -4 8 4 12 0" stroke="hsl(var(--accent))" stroke-width="2" fill="none" opacity="0.8"/>
+  </g>
+</svg>
