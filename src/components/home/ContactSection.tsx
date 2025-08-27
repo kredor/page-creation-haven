@@ -4,6 +4,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
 import { 
   Form,
   FormControl,
@@ -20,7 +21,10 @@ import { Loader2 } from "lucide-react";
 const formSchema = z.object({
   name: z.string().min(2, { message: "Namn måste vara minst 2 tecken." }),
   email: z.string().email({ message: "Vänligen ange en giltig e-postadress." }),
-  message: z.string().min(10, { message: "Meddelandet måste vara minst 10 tecken." })
+  message: z.string().min(10, { message: "Meddelandet måste vara minst 10 tecken." }),
+  consent: z.boolean().refine(val => val === true, {
+    message: "Du måste godkänna behandlingen av personuppgifter för att skicka meddelandet."
+  })
 });
 
 const ContactSection = () => {
@@ -32,7 +36,8 @@ const ContactSection = () => {
     defaultValues: {
       name: "",
       email: "",
-      message: ""
+      message: "",
+      consent: false
     }
   });
 
@@ -130,6 +135,36 @@ const ContactSection = () => {
                       />
                     </FormControl>
                     <FormMessage />
+                  </FormItem>
+                )}
+              />
+              
+              <FormField
+                control={form.control}
+                name="consent"
+                render={({ field }) => (
+                  <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                    <FormControl>
+                      <Checkbox
+                        checked={field.value}
+                        onCheckedChange={field.onChange}
+                      />
+                    </FormControl>
+                    <div className="space-y-1 leading-none">
+                      <FormLabel className="text-sm">
+                        Jag godkänner att mina personuppgifter behandlas enligt{" "}
+                        <a 
+                          href="/integritetspolicy" 
+                          className="text-primary underline hover:no-underline"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          integritetspolicyn
+                        </a>
+                        .
+                      </FormLabel>
+                      <FormMessage />
+                    </div>
                   </FormItem>
                 )}
               />
