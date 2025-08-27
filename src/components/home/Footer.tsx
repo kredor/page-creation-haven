@@ -8,7 +8,7 @@ const Footer = () => {
           <p className="mb-6">Experter på återvätning och miljöövervakning i Mellansverige</p>
           <div className="flex flex-wrap justify-center space-x-6 mb-8">
             <span className="text-sm opacity-80 my-1">återvätning</span>
-            <span className="text-sm opacity-80 my-1">rewetting</span>
+            <span className="text-sm opacity-80 my-1">återvätning</span>
             <span className="text-sm opacity-80 my-1">naturrestaureringsfördordningen</span>
             <span className="text-sm opacity-80 my-1">NRF</span>
             

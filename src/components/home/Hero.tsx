@@ -14,7 +14,7 @@ const Hero = () => {
           Din partner för professionell projektering och uppföljning av återvätningsprojekt med fokus på grundvatten, växthusgaser och vegetation.
         </p>
         <p className="text-lg mb-12 max-w-3xl mx-auto">
-          Vi är specialister inom Naturrestaureringsfördordningen (NRF) och rewetting för restaurering av torvmarker och våtmarker i Mellansverige.
+          Vi är specialister inom Naturrestaureringsfördordningen (NRF) och återvätning för restaurering av torvmarker och våtmarker i Mellansverige.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <a href="#contact" className="hero-button group">
