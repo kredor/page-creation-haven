@@ -3,6 +3,7 @@ import { Droplet, Waves, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useState } from "react";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const Navigation = () => {
   const isMobile = useIsMobile();
@@ -34,7 +35,10 @@ const Navigation = () => {
           </span>
         </a>
         
-        {isMobile ? (
+        <div className="flex items-center space-x-4">
+          <LanguageSwitcher />
+          
+          {isMobile ? (
           <div className="relative">
             <button 
               onClick={toggleMenu} 
@@ -87,8 +91,9 @@ const Navigation = () => {
                 )}
               </div>
             ))}
-          </div>
-        )}
+            </div>
+          )}
+        </div>
       </div>
     </nav>
   );
