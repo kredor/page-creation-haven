@@ -13,8 +13,11 @@ import Methodology from "./pages/Methodology";
 import MethodologyEN from "./pages/Methodology.en";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import PrivacyPolicyEN from "./pages/PrivacyPolicy.en";
-import NotFound from "./pages/NotFound";
-import NotFoundEN from "./pages/NotFound.en";
+import IndexDE from "./pages/Index.de";
+import ServicesDE from "./pages/Services.de";
+import MethodologyDE from "./pages/Methodology.de";
+import PrivacyPolicyDE from "./pages/PrivacyPolicy.de";
+import NotFoundDE from "./pages/NotFound.de";
 
 const queryClient = new QueryClient();
 
@@ -37,6 +40,12 @@ const App = () => (
             <Route path="/en/services" element={<ServicesEN />} />
             <Route path="/en/methodology" element={<MethodologyEN />} />
             <Route path="/en/privacy-policy" element={<PrivacyPolicyEN />} />
+            
+            {/* German routes */}
+            <Route path="/de" element={<IndexDE />} />
+            <Route path="/de/services" element={<ServicesDE />} />
+            <Route path="/de/methodology" element={<MethodologyDE />} />
+            <Route path="/de/privacy-policy" element={<PrivacyPolicyDE />} />
             
             {/* 404 routes - must be last */}
             <Route path="*" element={<NotFound />} />
