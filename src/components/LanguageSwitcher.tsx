@@ -1,17 +1,33 @@
 import { Globe } from "lucide-react";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const LanguageSwitcher = () => {
-  const { language, setLanguage } = useLanguage();
+  const navigate = useNavigate();
+  const location = useLocation();
+  
+  // Determine current language based on path
+  const isEnglish = location.pathname.startsWith('/en');
+  
+  const handleLanguageToggle = () => {
+    if (isEnglish) {
+      // Switch to Swedish - remove /en prefix
+      const swedishPath = location.pathname.replace('/en', '') || '/';
+      navigate(swedishPath + location.hash);
+    } else {
+      // Switch to English - add /en prefix
+      const englishPath = '/en' + location.pathname;
+      navigate(englishPath + location.hash);
+    }
+  };
 
   return (
     <div className="flex items-center space-x-2">
       <Globe className="w-4 h-4 text-primary" />
       <button
-        onClick={() => setLanguage(language === 'sv' ? 'en' : 'sv')}
+        onClick={handleLanguageToggle}
         className="px-3 py-1 text-sm font-medium rounded-md hover:bg-gray-100 transition-colors"
       >
-        {language === 'sv' ? 'EN' : 'SV'}
+        {isEnglish ? 'SV' : 'EN'}
       </button>
     </div>
   );
