@@ -34,13 +34,12 @@ const App = () => (
             
             {/* English routes */}
             <Route path="/en" element={<IndexEN />} />
-            <Route path="/services/en" element={<ServicesEN />} />
-            <Route path="/methodology/en" element={<MethodologyEN />} />
-            <Route path="/integritetspolicy/en" element={<PrivacyPolicyEN />} />
+            <Route path="/en/services" element={<ServicesEN />} />
+            <Route path="/en/methodology" element={<MethodologyEN />} />
+            <Route path="/en/privacy-policy" element={<PrivacyPolicyEN />} />
             
-            {/* 404 routes */}
+            {/* 404 routes - must be last */}
             <Route path="*" element={<NotFound />} />
-            <Route path="/en/*" element={<NotFoundEN />} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>

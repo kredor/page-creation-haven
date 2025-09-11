@@ -16,7 +16,7 @@ const AboutSectionEN = () => {
             We help landowners, municipalities, and organizations implement rewetting projects that meet both environmental goals and regulatory requirements. Our expertise covers everything from initial assessment to long-term monitoring.
           </p>
           <div className="text-center">
-            <Link to="/services/en" className="inline-flex items-center hero-button group">
+            <Link to="/en/services" className="inline-flex items-center hero-button group">
               Learn more about our services
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Link>
