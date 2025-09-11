@@ -32,7 +32,7 @@ const ServicesSectionEN = () => {
       title: "Nature Restoration Regulation (NRR)",
       description: "EU's new Nature Restoration Regulation creates binding requirements for member countries to restore drained peatlands.",
       icon: Globe,
-      link: "/services/en"
+      link: "/en/services"
     },
   ];
 
@@ -65,7 +65,7 @@ const ServicesSectionEN = () => {
         </div>
         
         <div className="text-center">
-          <Link to="/services/en" className="hero-button group">
+          <Link to="/en/services" className="hero-button group">
             Read more about our services
           </Link>
         </div>

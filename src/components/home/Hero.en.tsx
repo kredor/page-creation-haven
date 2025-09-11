@@ -20,7 +20,7 @@ const HeroEN = () => {
             Contact us
             <ArrowRight className="inline-block ml-2 group-hover:translate-x-1 transition-transform" />
           </a>
-          <Link to="/methodology/en" className="bg-white text-primary px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
+          <Link to="/en/methodology" className="bg-white text-primary px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
             Our certified method
           </Link>
         </div>

@@ -17,7 +17,7 @@ const NavigationEN = () => {
     { href: "#services", label: "Services" },
     { href: "#team", label: "About Us" },
     { href: "#contact", label: "Contact" },
-    { to: "/services/en", label: "More about our services" },
+    { to: "/en/services", label: "More about our services" },
   ];
 
   return (
