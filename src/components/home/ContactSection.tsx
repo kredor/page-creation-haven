@@ -1,190 +1,48 @@
-
-import { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Checkbox } from "@/components/ui/checkbox";
-import { 
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage
-} from "@/components/ui/form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import * as z from "zod";
-import { Loader2 } from "lucide-react";
-
-const formSchema = z.object({
-  name: z.string().min(2, { message: "Namn måste vara minst 2 tecken." }),
-  email: z.string().email({ message: "Vänligen ange en giltig e-postadress." }),
-  message: z.string().min(10, { message: "Meddelandet måste vara minst 10 tecken." }),
-  consent: z.boolean().refine(val => val === true, {
-    message: "Du måste godkänna behandlingen av personuppgifter för att skicka meddelandet."
-  })
-});
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const ContactSection = () => {
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      name: "",
-      email: "",
-      message: "",
-      consent: false
-    }
-  });
-
-  const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    setIsSubmitting(true);
-    
-    try {
-      // Email configuration
-      const emailSubject = "REWETTING!!";
-      const emailTo = "orjan.berglund@slu.se";
-      
-      // Prepare email content
-      const emailBody = `
-        Namn: ${values.name}
-        E-post: ${values.email}
-        Meddelande: ${values.message}
-      `;
-      
-      // Simple mailto link approach
-      const mailtoLink = `mailto:${emailTo}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
-      
-      // Open the email client
-      window.open(mailtoLink, "_blank");
-      
-      // Show success toast
-      toast({
-        title: "Meddelande skickat!",
-        description: "Tack för ditt meddelande, vi återkopplar till dig inom några dagar.",
-        duration: 5000,
-      });
-      
-      // Reset the form
-      form.reset();
-    } catch (error) {
-      console.error("Error sending message:", error);
-      toast({
-        title: "Något gick fel",
-        description: "Det gick inte att skicka meddelandet. Försök igen senare.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   return (
-    <section id="contact" className="py-20 bg-white">
-      <div className="container mx-auto px-4 section-animate">
-        <h2 className="section-title text-center">Kontakta oss</h2>
-        <p className="text-xl text-center max-w-3xl mx-auto mb-8">
-          Är ni redo att återställa värdefulla våtmarker och ta del av de möjligheter som ges? Tveka inte att kontakta oss.
-        </p>
-        <div className="max-w-md mx-auto mt-12">
-          <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-              <FormField
-                control={form.control}
-                name="name"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Namn</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Ditt namn" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+    <section id="contact" className="py-20 px-4 bg-gray-50">
+      <div className="container mx-auto section-animate">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+          Kontakta oss
+        </h2>
+        
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-lg mb-12">
+            Är du redo att starta ditt återvätningsprojekt? Kontakta oss för en kostnadsfri första konsultation där vi diskuterar din marks potential och möjligheterna för restaurering.
+          </p>
+          
+          <div className="bg-white p-8 rounded-lg shadow-sm">
+            <div className="space-y-8">
+              <div className="flex flex-col items-center">
+                <Mail className="w-8 h-8 text-secondary mb-4" />
+                <h4 className="font-semibold text-lg mb-2">E-post</h4>
+                <p className="text-gray-600 mb-2">Örjan Berglund</p>
+                <a href="mailto:berglund76@gmail.com" className="text-secondary hover:text-primary transition-colors text-lg">
+                  berglund76@gmail.com
+                </a>
+              </div>
               
-              <FormField
-                control={form.control}
-                name="email"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>E-post</FormLabel>
-                    <FormControl>
-                      <Input type="email" placeholder="din.email@exempel.se" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+              <div className="flex flex-col items-center">
+                <Phone className="w-8 h-8 text-secondary mb-4" />
+                <h4 className="font-semibold text-lg mb-2">Telefon</h4>
+                <a href="tel:0707142186" className="text-secondary hover:text-primary transition-colors text-lg">
+                  070-714 21 86
+                </a>
+              </div>
               
-              <FormField
-                control={form.control}
-                name="message"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Meddelande</FormLabel>
-                    <FormControl>
-                      <Textarea 
-                        placeholder="Skriv ditt meddelande här..." 
-                        rows={4} 
-                        {...field} 
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              
-              <FormField
-                control={form.control}
-                name="consent"
-                render={({ field }) => (
-                  <FormItem className="flex flex-row items-start space-x-3 space-y-0">
-                    <FormControl>
-                      <Checkbox
-                        checked={field.value}
-                        onCheckedChange={field.onChange}
-                      />
-                    </FormControl>
-                    <div className="space-y-1 leading-none">
-                      <FormLabel className="text-sm">
-                        Jag godkänner att mina personuppgifter behandlas enligt{" "}
-                        <a 
-                          href="/integritetspolicy" 
-                          className="text-primary underline hover:no-underline"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          integritetspolicyn
-                        </a>
-                        .
-                      </FormLabel>
-                      <FormMessage />
-                    </div>
-                  </FormItem>
-                )}
-              />
-              
-              <Button 
-                type="submit" 
-                className="hero-button w-full"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? (
-                  <>
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Skickar...
-                  </>
-                ) : (
-                  "Skicka meddelande"
-                )}
-              </Button>
-            </form>
-          </Form>
+              <div className="flex flex-col items-center">
+                <MapPin className="w-8 h-8 text-secondary mb-4" />
+                <h4 className="font-semibold text-lg mb-2">Serviceområde</h4>
+                <p className="text-gray-600">Mellansverige (Västmanland, Örebro, Sörmland, Uppsala)</p>
+              </div>
+            </div>
+          </div>
+          
+          <p className="text-lg mt-12">
+            Vi ser fram emot att höra från dig och hjälpa till att göra ditt återvätningsprojekt till en framgång!
+          </p>
         </div>
       </div>
     </section>

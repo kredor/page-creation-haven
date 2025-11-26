@@ -8,59 +8,41 @@ const ContactSectionDE = () => {
           Kontakt aufnehmen
         </h2>
         
-        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          <div>
-            <h3 className="text-2xl font-bold mb-8">Kontakt</h3>
-            <div className="space-y-6">
-              <div className="flex items-center">
-                <Mail className="w-6 h-6 text-secondary mr-4" />
-                <div>
-                  <h4 className="font-semibold">E-Mail</h4>
-                  <a href="mailto:kontakt@markovattenbyran.se" className="text-primary hover:text-secondary transition-colors">
-                    kontakt@markovattenbyran.se
-                  </a>
-                </div>
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-lg mb-12">
+            Sind Sie bereit, Ihr Wiedervernässungsprojekt zu starten? Kontaktieren Sie uns für eine kostenlose Erstberatung, in der wir das Potenzial Ihres Landes und die Möglichkeiten zur Restaurierung besprechen.
+          </p>
+          
+          <div className="bg-white p-8 rounded-lg shadow-sm">
+            <div className="space-y-8">
+              <div className="flex flex-col items-center">
+                <Mail className="w-8 h-8 text-secondary mb-4" />
+                <h4 className="font-semibold text-lg mb-2">E-Mail</h4>
+                <p className="text-gray-600 mb-2">Örjan Berglund</p>
+                <a href="mailto:berglund76@gmail.com" className="text-secondary hover:text-primary transition-colors text-lg">
+                  berglund76@gmail.com
+                </a>
               </div>
               
-              <div className="flex items-center">
-                <Phone className="w-6 h-6 text-secondary mr-4" />
-                <div>
-                  <h4 className="font-semibold">Telefon</h4>
-                  <p className="text-gray-600">+46 (0)70 123 45 67</p>
-                </div>
+              <div className="flex flex-col items-center">
+                <Phone className="w-8 h-8 text-secondary mb-4" />
+                <h4 className="font-semibold text-lg mb-2">Telefon</h4>
+                <a href="tel:0707142186" className="text-secondary hover:text-primary transition-colors text-lg">
+                  070-714 21 86
+                </a>
               </div>
               
-              <div className="flex items-center">
-                <MapPin className="w-6 h-6 text-secondary mr-4" />
-                <div>
-                  <h4 className="font-semibold">Servicegebiet</h4>
-                  <p className="text-gray-600">Mittelschweden (Västmanland, Örebro, Sörmland, Uppsala)</p>
-                </div>
+              <div className="flex flex-col items-center">
+                <MapPin className="w-8 h-8 text-secondary mb-4" />
+                <h4 className="font-semibold text-lg mb-2">Servicegebiet</h4>
+                <p className="text-gray-600">Mittelschweden (Västmanland, Örebro, Sörmland, Uppsala)</p>
               </div>
             </div>
           </div>
           
-          <div>
-            <h3 className="text-2xl font-bold mb-8">Unsere Dienstleistungen</h3>
-            <div className="space-y-4">
-              <div className="p-4 bg-white rounded-lg">
-                <h4 className="font-semibold mb-2">Landbewertung und Beratung</h4>
-                <p className="text-gray-600 text-sm">Identifizierung geeigneter Flächen für Wiedervernässung</p>
-              </div>
-              <div className="p-4 bg-white rounded-lg">
-                <h4 className="font-semibold mb-2">Planung und Genehmigungen</h4>
-                <p className="text-gray-600 text-sm">Technische Planung und behördliche Prozesse</p>
-              </div>
-              <div className="p-4 bg-white rounded-lg">
-                <h4 className="font-semibold mb-2">Projektdurchführung</h4>
-                <p className="text-gray-600 text-sm">Professionelle Umsetzung von Wiedervernässungsmaßnahmen</p>
-              </div>
-              <div className="p-4 bg-white rounded-lg">
-                <h4 className="font-semibold mb-2">Langfristige Überwachung</h4>
-                <p className="text-gray-600 text-sm">Wissenschaftliche Überwachung und Berichterstattung</p>
-              </div>
-            </div>
-          </div>
+          <p className="text-lg mt-12">
+            Wir freuen uns darauf, von Ihnen zu hören und Ihr Wiedervernässungsprojekt zum Erfolg zu führen!
+          </p>
         </div>
       </div>
     </section>
