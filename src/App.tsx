@@ -17,6 +17,7 @@ import IndexDE from "./pages/Index.de";
 import ServicesDE from "./pages/Services.de";
 import MethodologyDE from "./pages/Methodology.de";
 import PrivacyPolicyDE from "./pages/PrivacyPolicy.de";
+import NotFound from "./pages/NotFound";
 import NotFoundDE from "./pages/NotFound.de";
 
 const queryClient = new QueryClient();
