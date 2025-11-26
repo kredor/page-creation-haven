@@ -3,28 +3,46 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 const TeamSectionDE = () => {
   const team = [
     {
-      name: "Dr. Erik Lundberg",
-      role: "Torfmoor-Ökologe & Projektleiter",
+      name: "Örjan Berglund",
+      role: "Gründer & Projektleiter",
       image: "/lovable-uploads/0a89a031-97a3-46dc-a5c0-f265939f38bc.png",
-      description: "Promotion in Umweltwissenschaften mit Spezialisierung auf Torfmoor-Hydrologie und Treibhausgasdynamik. Über 15 Jahre Erfahrung in Feuchtgebietsprojekten.",
-      expertise: ["Torfmoor-Ökologie", "Hydrologie", "THG-Messungen", "Projektmanagement"],
-      linkedin: "https://linkedin.com/in/eriklundberg"
+      description: "Forscher in Bodenkunde mit über 20 Jahren Erfahrung in Umweltüberwachung und Boden- und Wasserfragen.",
+      expertise: [
+        "Wiedervernässung von organischen Böden",
+        "Treibhausgasmessungen",
+        "Bodenphysikalische Untersuchungen",
+        "Projektleitung in der Umweltüberwachung",
+        "Entwässerung und Wasserregulierung"
+      ],
+      linkedin: "https://www.linkedin.com/in/orjanberglund/"
     },
     {
-      name: "M.Sc. Anna Svensson",
-      role: "Umweltingenieurin & GIS-Spezialistin",
-      image: "/lovable-uploads/94356559-202d-45dc-8ac4-68ea422adf04.png", 
-      description: "Master in Umweltingenieurwesen mit Fokus auf Wassermanagement und Raumanalyse. Spezialistin für Drohnentechnologie und 3D-Modellierung für Wiedervernässungsprojekte.",
-      expertise: ["GIS-Analyse", "Drohnenvermessung", "3D-Modellierung", "Wassermanagement"],
-      linkedin: "https://linkedin.com/in/annasvensson"
-    },
-    {
-      name: "Dr. Magnus Karlsson",
-      role: "Biogeochemiker & Überwachungsspezialist",
+      name: "Sabine Jordan",
+      role: "Umweltspezialistin",
       image: "/lovable-uploads/d1b76eb2-cd5b-4ac6-8fde-9ee02a65d5c7.png",
-      description: "Promotion in Biogeochemie mit Expertise in Kohlenstoffkreisläufen und Treibhausgasflüssen aus wiederhergestellten Torfmooren. Leitet unsere Überwachungs- und Verifizierungsprogramme.",
-      expertise: ["Biogeochemie", "Kohlenstoffkreislauf", "Überwachungssysteme", "Datenanalyse"],
-      linkedin: "https://linkedin.com/in/magnuskarlsson"
+      description: "Forscherin in Bodenkunde an der SLU mit Expertise in Treibhausgasmessungen und Torfmooren.",
+      expertise: [
+        "Treibhausgasmessungen von Torfmooren",
+        "Bodenphysikalische und bodenchemische Analysen",
+        "Wiedervernässung von organischen Böden",
+        "Naturbasierte Klimaschutzmethoden",
+        "Torf und Torfmoore"
+      ],
+      linkedin: "https://www.linkedin.com/in/sabine-jordan-24289316/"
+    },
+    {
+      name: "Daniel Iseskog",
+      role: "Technischer Experte",
+      image: "/lovable-uploads/94356559-202d-45dc-8ac4-68ea422adf04.png",
+      description: "Konstrukteur und Drohnenpilot",
+      expertise: [
+        "Hydrologische Modellierung",
+        "Überwachung von Grundwasserständen",
+        "GIS und Kartierung von Torfmooren",
+        "Praktische Umsetzung der Wiedervernässung",
+        "Technische Lösungen für Wasserregulierung"
+      ],
+      linkedin: "https://www.linkedin.com/in/daniel-iseskog/"
     }
   ];
 

@@ -3,28 +3,46 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 const TeamSectionEN = () => {
   const team = [
     {
-      name: "Dr. Erik Lundberg",
-      role: "Peatland Ecologist & Project Manager",
+      name: "Örjan Berglund",
+      role: "Founder & Project Manager",
       image: "/lovable-uploads/0a89a031-97a3-46dc-a5c0-f265939f38bc.png",
-      description: "PhD in Environmental Science with specialization in peatland hydrology and greenhouse gas dynamics. Over 15 years of experience in wetland restoration projects.",
-      expertise: ["Peatland ecology", "Hydrology", "GHG measurements", "Project management"],
-      linkedin: "https://linkedin.com/in/eriklundberg"
+      description: "Researcher in soil science with over 20 years of experience in environmental monitoring and soil and water issues.",
+      expertise: [
+        "Rewetting of organic soils",
+        "Greenhouse gas measurements",
+        "Soil physical investigations",
+        "Project management in environmental monitoring",
+        "Drainage and water regulation"
+      ],
+      linkedin: "https://www.linkedin.com/in/orjanberglund/"
     },
     {
-      name: "MSc. Anna Svensson",
-      role: "Environmental Engineer & GIS Specialist",
-      image: "/lovable-uploads/94356559-202d-45dc-8ac4-68ea422adf04.png", 
-      description: "Master's in Environmental Engineering with focus on water management and spatial analysis. Specialist in drone technology and 3D modeling for rewetting projects.",
-      expertise: ["GIS analysis", "Drone surveying", "3D modeling", "Water management"],
-      linkedin: "https://linkedin.com/in/annasvensson"
-    },
-    {
-      name: "Dr. Magnus Karlsson",
-      role: "Biogeochemist & Monitoring Specialist",
+      name: "Sabine Jordan",
+      role: "Environmental Specialist",
       image: "/lovable-uploads/d1b76eb2-cd5b-4ac6-8fde-9ee02a65d5c7.png",
-      description: "PhD in Biogeochemistry with expertise in carbon cycling and greenhouse gas fluxes from restored peatlands. Leads our monitoring and verification programs.",
-      expertise: ["Biogeochemistry", "Carbon cycling", "Monitoring systems", "Data analysis"],
-      linkedin: "https://linkedin.com/in/magnuskarlsson"
+      description: "Researcher in soil science at SLU with expertise in greenhouse gas measurements and peatlands.",
+      expertise: [
+        "Greenhouse gas measurements from peatlands",
+        "Soil physical and soil chemical analyses",
+        "Rewetting of organic soils",
+        "Nature-based climate solutions",
+        "Peat and peatlands"
+      ],
+      linkedin: "https://www.linkedin.com/in/sabine-jordan-24289316/"
+    },
+    {
+      name: "Daniel Iseskog",
+      role: "Technical Expert",
+      image: "/lovable-uploads/94356559-202d-45dc-8ac4-68ea422adf04.png",
+      description: "Designer and drone pilot",
+      expertise: [
+        "Hydrological modeling",
+        "Monitoring of groundwater levels",
+        "GIS and mapping of peatlands",
+        "Practical implementation of rewetting",
+        "Technical solutions for water regulation"
+      ],
+      linkedin: "https://www.linkedin.com/in/daniel-iseskog/"
     }
   ];
 
