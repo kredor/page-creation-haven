@@ -8,81 +8,41 @@ const ContactSectionEN = () => {
           Contact Us
         </h2>
         
-        <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-2xl font-bold mb-8">Get in Touch</h3>
-              <p className="text-lg mb-8">
-                Ready to start your rewetting project? Contact us for a free initial consultation where we discuss your land's potential and the possibilities for restoration.
-              </p>
-              
-              <div className="space-y-6">
-                <div className="flex items-center">
-                  <Mail className="w-6 h-6 text-secondary mr-4" />
-                  <div>
-                    <h4 className="font-semibold">Email</h4>
-                    <a href="mailto:kontakt@markovattenbyran.se" className="text-secondary hover:text-primary transition-colors">
-                      kontakt@markovattenbyran.se
-                    </a>
-                  </div>
-                </div>
-                
-                <div className="flex items-center">
-                  <Phone className="w-6 h-6 text-secondary mr-4" />
-                  <div>
-                    <h4 className="font-semibold">Phone</h4>
-                    <a href="tel:+46123456789" className="text-secondary hover:text-primary transition-colors">
-                      +46 12 345 67 89
-                    </a>
-                  </div>
-                </div>
-                
-                <div className="flex items-center">
-                  <MapPin className="w-6 h-6 text-secondary mr-4" />
-                  <div>
-                    <h4 className="font-semibold">Service Area</h4>
-                    <p>Central Sweden (Mellansverige)</p>
-                  </div>
-                </div>
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-lg mb-12">
+            Ready to start your rewetting project? Contact us for a free initial consultation where we discuss your land's potential and the possibilities for restoration.
+          </p>
+          
+          <div className="bg-white p-8 rounded-lg shadow-sm">
+            <div className="space-y-8">
+              <div className="flex flex-col items-center">
+                <Mail className="w-8 h-8 text-secondary mb-4" />
+                <h4 className="font-semibold text-lg mb-2">Email</h4>
+                <p className="text-gray-600 mb-2">Örjan Berglund</p>
+                <a href="mailto:berglund76@gmail.com" className="text-secondary hover:text-primary transition-colors text-lg">
+                  berglund76@gmail.com
+                </a>
               </div>
-            </div>
-            
-            <div className="bg-white p-8 rounded-lg shadow-sm">
-              <h3 className="text-xl font-bold mb-6">What We Can Help You With</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-secondary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>Assessment of your land's rewetting potential</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-secondary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>Planning and design of rewetting measures</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-secondary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>Support with permits and authority contacts</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-secondary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>Implementation and project management</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-secondary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>Long-term monitoring and reporting</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-secondary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>Guidance on funding opportunities</span>
-                </li>
-              </ul>
+              
+              <div className="flex flex-col items-center">
+                <Phone className="w-8 h-8 text-secondary mb-4" />
+                <h4 className="font-semibold text-lg mb-2">Phone</h4>
+                <a href="tel:0707142186" className="text-secondary hover:text-primary transition-colors text-lg">
+                  070-714 21 86
+                </a>
+              </div>
+              
+              <div className="flex flex-col items-center">
+                <MapPin className="w-8 h-8 text-secondary mb-4" />
+                <h4 className="font-semibold text-lg mb-2">Service Area</h4>
+                <p className="text-gray-600">Central Sweden (Västmanland, Örebro, Sörmland, Uppsala)</p>
+              </div>
             </div>
           </div>
           
-          <div className="text-center mt-12">
-            <p className="text-lg">
-              We look forward to hearing from you and helping make your rewetting project a success!
-            </p>
-          </div>
+          <p className="text-lg mt-12">
+            We look forward to hearing from you and helping make your rewetting project a success!
+          </p>
         </div>
       </div>
     </section>
